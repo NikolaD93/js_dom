@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body.dark {
   background-color: rgb(22, 20, 20);
   color: white;
@@ -13,4 +20,51 @@ body.dark {
 
 .show {
   display: block;
+}
+
+.btn {
+  padding: 15px 20px;
+  font-size: 2rem;
+  border-radius: 6px;
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background-color: rgb(109, 59, 59);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sidebar {
+  border: 2px solid;
+  border-radius: 6px;
+  width: 50%;
+  position: relative;
+  padding-block: 20px;
+  height: 500px;
+  transform: translateX(-100%);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  /* display: none; */
+}
+
+.sidebar-show {
+  /* display: block; */
+  transform: translateX(0);
+}
+
+.btn-menu {
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  z-index: 9999;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
